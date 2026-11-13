@@ -6,9 +6,13 @@ class Prestamo:
     def mostrar_informacion_prestamo(self):
         print("Información del préstamo:")
         print("Datos del usuario:")
+        print("-------------------------")
         self.__usuario.mostrar_informacion_usuario()
+        print("-------------------------")
         print("Datos del libro: ")
+        print("-------------------------")
         self.__libro.mostrar_informacion_libro()
+        print("-------------------------")
 
     def consultar_usuario(self):
         return self.__usuario

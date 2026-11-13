@@ -4,23 +4,26 @@ from usuario import Usuario
 from funciones import mostrar_menu
 
 print("Inicializando biblioteca...")
+print("---------------------------")
 obj_biblioteca = Biblioteca()
 
-print("Aquí se registrará un libro")
+
 obj_libro1 = Libro("L001", "Cien Años de Soledad", "Gabriel García Márquez", 1967, "disponible")
 obj_libro2 = Libro("L002", "El Principito", "Antoine de Saint-Exupéry", 1943, "disponible")
 obj_libro3 = Libro("L003", "Don Quijote de la Mancha", "Miguel de Cervantes", 1605, "disponible")
 
 print ("Agregando libros a la biblioteca...")
+print ("-----------------------------------") 
 obj_biblioteca.agregar_libro(obj_libro1)
 obj_biblioteca.agregar_libro(obj_libro2)
 obj_biblioteca.agregar_libro(obj_libro3)
 
-print("Aquí se registrará un usuario")
+
 obj_usuario1 = Usuario("U001", "Juan Pérez", "juan.perez@hotmail.com")
 obj_usuario2 = Usuario("U002", "María López", "maria.lopez@gmail.com")
 
-
+print ("Agregando usuarios a la biblioteca...")
+print ("-------------------------------------")
 obj_biblioteca.agregar_usuario(obj_usuario1)
 obj_biblioteca.agregar_usuario(obj_usuario2)
 
@@ -32,6 +35,7 @@ while True:
         codigo_libro = input("Ingrese el código del libro: ")
         if obj_biblioteca.buscar_libro(codigo_libro):
             print(f"Ya existe un libro con el código {codigo_libro}.")
+            print ("------------------------------------------")
         else:
             titulo_libro = input("Ingrese el título del libro: ")
             autor_libro = input("Ingrese el autor del libro: ")
@@ -61,8 +65,10 @@ while True:
         print("-------------------------")
         obj_biblioteca.mostrar_usuarios()
     elif opcion == "5":
+        print ("-------------------------")
         carnet = input("Ingrese el carnet del usuario: ")
         codigo = input("Ingrese el código del libro: ")
+        print ("---------------------------------")
 
         usuario = obj_biblioteca.buscar_usuario(carnet)
         libro = obj_biblioteca.buscar_libro(codigo)
